@@ -1,0 +1,58 @@
+
+
+
+<ng-container *ngIf="recipes.length!=0">
+    <div class="container-fluid favorites">
+        <div class="container favorites1 py-4">
+            <table class="table text-white">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Recipe Name</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of recipes; let i=index">
+                        <th scope="row">{{i+1}}</th>
+                        <td>{{item.name}}</td>
+                        <td>${{item.price}}</td>
+                        <td>{{item.description}}</td>
+                        <td><button type="button" (click)="removeItem(item)" class="btn btn-danger">Remove</button></td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td></td>
+                        <td></td>
+                        <td><button class="btn btn-danger" (click)="removeAllItem()">Remove All</button></td>
+                        <td><a class="btn btn-danger" routerLink="/menu">Shop More</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</ng-container>
+
+
+
+
+
+<ng-container *ngIf="recipes.length==0">
+    <div class="container-fluid favorites">
+        <div class="container py-4 favorites1">
+            <h3 class="card-title text-center text-white my-5">My Favorites</h3>
+    
+            <div class="card py-4">
+    
+                <div class="text-center">
+                    <img src="../../assets/images/favorites.svg" alt="favorites" style="width: 20rem;height: 10rem;">
+                    <h4 class="text-dark">Your favorites is empty</h4>
+                    <h6 class="text-dark">Add recipe to it</h6>
+                    <button class="btn btn-danger" routerLink="/menu">Order Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container>

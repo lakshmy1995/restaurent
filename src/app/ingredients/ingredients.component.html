@@ -1,0 +1,124 @@
+
+<div class="container-fluid text-white py-5 details">
+
+    <div>
+        <h1 class="text-center my-3">Recipe</h1>
+    </div>
+
+
+
+    
+    <div class="container">
+        <img class="rounded mx-auto d-block" [src]="getemp_data.image" alt="{{getemp_data.name}}" width="600" height="250">
+    </div>
+
+   
+    <div class="receipe-content-area">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-12 col-md-8">
+                    <div class="receipe-headline my-5">
+                        
+                        <h2 class="text-center">{{getemp_data.name}}</h2>
+                        <div class="receipe-duration px-5" style="border-left:2px solid #AD2929;">
+                            <h6>Prep: 15 mins</h6>
+                            <h6>Cook: 30 mins</h6>
+                            <h6>Yields: 8 Servings</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 my-4">
+                    <div class="receipe-ratings text-right my-5">
+                        <div class="rating my-5">
+                            <input type="radio" name="rating" id="star10" value="5">
+                            <label for="star10" class="full"></label>
+                            
+                            <input type="radio" name="rating" id="star9" value="4.5">
+                            <label for="star9" class="half"></label>
+                            
+                            <input type="radio" name="rating" id="star8" value="4">
+                            <label for="star8" class="full"></label>
+                            
+                            <input type="radio" name="rating" id="star7" value="3.5">
+                            <label for="star7" class="half"></label>
+                            
+                            <input type="radio" name="rating" id="star6" value="3">
+                            <label for="star6" class="full"></label>
+                            
+                            <input type="radio" name="rating" id="star5" value="2.5">
+                            <label for="star5" class="half"></label>
+                            
+                            <input type="radio" name="rating" id="star4" value="2">
+                            <label for="star4" class="full"></label>
+                            
+                            <input type="radio" name="rating" id="star3" value="1.5">
+                            <label for="star3" class="half"></label>
+                            
+                            <input type="radio" name="rating" id="star2" value="1">
+                            <label for="star2" class="full"></label>
+                            
+                            <input type="radio" name="rating" id="star1" value="0.5">
+                            <label for="star1" class="half"></label>
+                        </div>
+                        <h4 class="badge bg-danger" style="height: 2rem;padding-top: 0.5rem;">For Begginers</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    
+                    <div class="single-preparation-step d-flex">
+                        <h4 class="mx-2">01.</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui.
+                            Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis.
+                            Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius
+                            natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                    </div>
+                    
+                    <div class="single-preparation-step d-flex">
+                        <h4 class="mx-2">02.</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui.
+                            Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis.
+                            Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius
+                            natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                    </div>
+                    
+                    <div class="single-preparation-step d-flex">
+                        <h4 class="mx-2">03.</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui.
+                            Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis.
+                            Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius
+                            natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                    </div>
+                    
+                    <div class="single-preparation-step d-flex">
+                        <h4 class="mx-2">04.</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui.
+                            Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis.
+                            Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius
+                            natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                    </div>
+                </div>
+
+                
+                <div class="col-12 col-lg-4">
+                    <div class="ingredients">
+                        <h4>Ingredients</h4>
+
+                        
+                        <div class="custom-control">
+                            
+                            <li id="detaillist" *ngFor="let item of getemp_data.description.split(',')">{{item}}</li>
+                        </div>
+
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

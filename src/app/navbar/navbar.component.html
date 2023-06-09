@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg  navbar-light">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white mx-5" href="#"><img src="assets/images/eatmore_logo.svg" alt=""
+        style="width: 7rem;"></a>
+    <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon bg-white"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <form class="d-flex ms-auto search">
+        <input class="form-control center" type="search" placeholder="Search" aria-label="Search"
+          style="border-radius: 0.3rem 0 0 0.3rem;">
+        <button class="btn btn-light" type="submit" style="border-radius: 0 0.3rem 0.3rem 0;"><img
+            src="../../assets/images/Search.svg" alt="" style="color: white;"></button>
+      </form>
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 mx-5">
+        <li class="nav-item">
+          <a class="nav-link active text-white" aria-current="page" routerLink="/home">Home</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link text-white" routerLink="/about">About</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link text-white" routerLink="/contact">Contact</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link text-white" routerLink="/menu">Menu</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link text-white position-relative" id="favorites" routerLink="/favourites" routerLinkActive="active-link">Favourites
+            <span class="badge bg-white text-danger position-absolute top-0 end-0" id="favcount">{{totalrecipe}}</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
